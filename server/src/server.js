@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
     res.send('Server is running')
 });
 
+
 app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => {
