@@ -88,12 +88,14 @@ const PostDetail = () => {
   if (!post) return null;
 
   const isAuthor = user && post.author._id === user._id;
+  console.log(post);
+console.log(post.image);
   return (
     <div>
       <div style={styles.post}>
         {post.image && (
           <img
-            src={`http://localhost:5000${post.image}`}
+            src={`http://localhost:5001${post.image}`}
             alt={post.title}
             style={styles.coverImage}
           />
