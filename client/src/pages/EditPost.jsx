@@ -119,7 +119,7 @@ const EditPost = () => {
             <div>
               <p style={styles.currentLabel}>Current image:</p>
               <img
-                src={`http://localhost:5001${existingImage}`}
+                src={existingImage}
                 alt="current"
                 style={styles.preview}
               />

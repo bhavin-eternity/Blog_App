@@ -44,7 +44,7 @@ const PostCard = ({ post }) => {
         <div style={styles.card}>
             {post.image && (
                 <img
-                    src={`http://localhost:5001${post.image}`}
+                    src={post.image}
                     alt={post.title}
                     style={styles.image}
                 />

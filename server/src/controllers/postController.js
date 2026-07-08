@@ -41,7 +41,7 @@ const createPost = async (req, res) => {
         const post = await Post.create({
             title,
             content,
-            image: req.file ? `/uploads/${req.file.filename}` : '',
+            image: req.file ? req.file.path : '',
             author: req.user._id,
         });
 
@@ -71,7 +71,7 @@ const updatePost = async (req, res) => {
         post.title = req.body.title || post.title;
         post.content = req.body.content || post.content;
         if (req.file) {
-            post.image = `/uploads/${req.file.filename}`;
+            post.image = req.file.path;
         }
 
         const updatedPost = await post.save();
